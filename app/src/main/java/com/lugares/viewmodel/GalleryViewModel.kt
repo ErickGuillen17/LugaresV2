@@ -1,4 +1,4 @@
-package com.lugares.ui.gallery
+package com.lugares.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
