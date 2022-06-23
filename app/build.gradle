@@ -70,7 +70,7 @@ dependencies {
     implementation "androidx.navigation:navigation-dynamic-features-fragment:2.4.2"
 
     //Para clases más adelante gps y cámara
-    implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
     implementation 'androidx.camera:camera-camera2:1.0.2'
 
     //Para clases más adelante usar imágenes y RecyclerView
