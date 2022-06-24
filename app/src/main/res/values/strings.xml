@@ -22,8 +22,26 @@
     <string name="msg_correo">Correo (abc@abc.com)</string>
     <string name="msg_telefono">Teléfono (9999-99999)</string>
     <string name="msg_web">Sitio Web</string>
-    <string name="bt_agregar">Agregar</string>
-    <string name="bt_actualizar">Actualizar</string>
+    <string name="bt_agregar">Agregar Lugar</string>
+    <string name="bt_actualizar">Actualizar Lugar</string>
     <string name="lugarAdded">Lugar agregado</string>
+    <string name="lugarUpdated">Lugar actualizado</string>
     <string name="noData">Faltan datos</string>
+    <string name="delete">Eliminar Lugar</string>
+    <string name="seguroBorrar">"¿Está seguro de eliminar "</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+
+    <string name="msg_enviar_correo">Enviar correo electrónico</string>
+    <string name="msg_phone_call">Realizar llamada telefónica</string>
+    <string name="msg_whatsapp_send">Enviar mensaje WhatsApp</string>
+    <string name="msg_web_view">Abrir sitio Web</string>
+    <string name="msg_map_view">Ver lugar en mapa</string>
+    <string name="tv_latitud_lb">Latitud</string>
+    <string name="tv_longitud_lb">Longitud</string>
+    <string name="tv_altura_lb">Altura</string>
+    <string name="msg_saludos">Saludos amigos</string>
+    <string name="msg_mensaje_correo">Le escribo este correo para</string>
+    <string name="msg_datos">Faltan datos</string>
+    <string name="error">Error</string>
 </resources>

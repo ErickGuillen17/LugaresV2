@@ -78,4 +78,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+    //Verifica si el ususario se encuentra autenticado y si es así pasa a la siguiente
+    //pantalla sin pedir autenticación
+    public override fun onStart() {
+        super.onStart()
+        //obtenemos el usuario actual... si existe...
+        val usuario = auth.currentUser
+        actualiza(usuario)
+    }
 }
