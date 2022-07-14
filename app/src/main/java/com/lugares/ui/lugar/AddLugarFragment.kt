@@ -39,8 +39,8 @@ class AddLugarFragment : Fragment() {
         val telefono = binding.etTelefono.text.toString()
         val web = binding.etWeb.text.toString()
         if (nombre.isNotEmpty()) {
-            val lugar = Lugar(0,nombre,correo,telefono,web,0.0,0.0,0.0,"","")
-            lugarViewModel.addLugar(lugar)
+            val lugar = Lugar("",nombre,correo,telefono,web,0.0,0.0,0.0,"","")
+            lugarViewModel.saveLugar(lugar)
             Toast.makeText(requireContext(),getString(R.string.lugarAdded),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_addLugarFragment_to_nav_lugar)
         } else {

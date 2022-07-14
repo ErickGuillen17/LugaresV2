@@ -160,7 +160,7 @@ class UpdateLugarFragment : Fragment() {
         val web = binding.etWeb.text.toString()
         if (nombre.isNotEmpty()) {
             val lugar = Lugar(args.lugar.id,nombre,correo,telefono,web,0.0,0.0,0.0,"","")
-            lugarViewModel.updateLugar(lugar)
+            lugarViewModel.saveLugar(lugar)
             Toast.makeText(requireContext(),getString(R.string.lugarUpdated),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateLugarFragment_to_nav_lugar)
         } else {
