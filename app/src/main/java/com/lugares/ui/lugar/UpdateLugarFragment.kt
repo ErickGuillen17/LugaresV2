@@ -16,6 +16,8 @@ import com.lugares.databinding.FragmentUpdateLugarBinding
 import com.lugares.model.Lugar
 import com.lugares.viewmodel.LugarViewModel
 import android.Manifest
+import android.media.MediaPlayer
+import com.bumptech.glide.Glide
 
 class UpdateLugarFragment : Fragment() {
 
@@ -26,6 +28,9 @@ class UpdateLugarFragment : Fragment() {
 
     private var _binding: FragmentUpdateLugarBinding? = null
     private val binding get() = _binding!!
+
+    //Para escuchar el audio grabado...
+    private lateinit var mediaPlayer: MediaPlayer
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -49,6 +54,26 @@ class UpdateLugarFragment : Fragment() {
 
         binding.btEmail.setOnClickListener { escribirCorreo() }
         binding.btPhone.setOnClickListener { llamarLugar() }
+
+        //Para inicializar y activar el boton de play... si hay ruta de audio
+        if (args.lugar.rutaAudio?.isNotEmpty()==true) {
+            mediaPlayer = MediaPlayer()
+            mediaPlayer.setDataSource(args.lugar.rutaAudio)
+            mediaPlayer.prepare()
+            binding.btPlay.isEnabled=true
+            binding.btPlay.setOnClickListener { mediaPlayer.start() }
+        } else {
+            binding.btPlay.isEnabled=false
+        }
+
+        //Si hay ruta de imagen... la dibujo..
+        if (args.lugar.rutaImagen?.isNotEmpty()==true) {
+            Glide.with(requireContext())
+                .load(args.lugar.rutaImagen)
+                .fitCenter()
+                .into(binding.imagen)
+        }
+
         //binding.btWhatsapp.setOnClickListener { enviarWhatsApp() }
         binding.btWeb.setOnClickListener { verWeb() }
         //binding.btLocation.setOnClickListener { verMapa() } */

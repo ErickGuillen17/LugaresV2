@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">Lugares</string>
+    <string name="app_name" translatable="false">Lugares</string>
+    <string name="default_web_client_id" translatable="false">424065913075-id7aqmbr602tifov90gtgofrmgdtkcut.apps.googleusercontent.com</string>
     <string name="tv_correo">Correo</string>
     <string name="tv_clave">Contraseña</string>
     <string name="msg_fallo_registro">Error registrando usuario</string>
@@ -11,16 +12,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_lugar">Lugares</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="msg_nombre">Nombre del lugar</string>
     <string name="msg_correo">Correo (abc@abc.com)</string>
-    <string name="msg_telefono">Teléfono (9999-99999)</string>
+    <string name="msg_telefono">Teléfono (9999–99999)</string>
     <string name="msg_web">Sitio Web</string>
     <string name="bt_agregar">Agregar Lugar</string>
     <string name="bt_actualizar">Actualizar Lugar</string>
@@ -31,7 +30,6 @@
     <string name="seguroBorrar">"¿Está seguro de eliminar "</string>
     <string name="si">Si</string>
     <string name="no">No</string>
-
     <string name="msg_enviar_correo">Enviar correo electrónico</string>
     <string name="msg_phone_call">Realizar llamada telefónica</string>
     <string name="msg_whatsapp_send">Enviar mensaje WhatsApp</string>
@@ -44,7 +42,6 @@
     <string name="msg_mensaje_correo">Le escribo este correo para</string>
     <string name="msg_datos">Faltan datos</string>
     <string name="error">Error</string>
-
     <string name="msgEscucharAudio">Escuchar nota de audio</string>
     <string name="msg_imagen">Imagen del lugar</string>
     <string name="graba_pausa">Graba o pausa grabación</string>
