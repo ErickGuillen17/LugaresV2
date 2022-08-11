@@ -8,7 +8,7 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/correo_usuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/tv_correo"

@@ -3,6 +3,9 @@ package com.lugares
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -11,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.lugares.databinding.ActivityPrincipalBinding
@@ -40,6 +44,29 @@ class Principal : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        actualiza(navView)
+    }
+
+    private fun actualiza(navView: NavigationView) {
+        val vista : View = navView.getHeaderView(0)
+
+        val tv_nombre : TextView = vista.findViewById(R.id.nombre_usuario)
+        val tv_correo : TextView = vista.findViewById(R.id.correo_usuario)
+        val imagen : ImageView = vista.findViewById(R.id.imagen_usuario)
+
+        val usuario = Firebase.auth.currentUser
+
+        tv_correo.text = usuario?.email
+        tv_nombre.text = usuario?.displayName
+
+        var foto = usuario?.photoUrl.toString()
+
+        if (foto.isNotEmpty()) {
+            Glide.with(this)
+                .load(foto)
+                .circleCrop()
+                .into(imagen)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
